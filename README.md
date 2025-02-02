@@ -64,8 +64,6 @@ npm run localize:build
 ✔️ **Routing with Vaadin Router**\
 ✔️ **Localization with `lit/localize`**\
 ✔️ **Unit Testing**\
-✔️ **Code Coverage Reports**\
-✔️ **Webpack Bundling**
 
 
 
