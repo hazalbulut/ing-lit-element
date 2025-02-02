@@ -52,7 +52,7 @@ export class NavMenu extends BaseElement {
 
     .logo {
       color: white;
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-decoration: none;
     }
 
@@ -66,11 +66,12 @@ export class NavMenu extends BaseElement {
       background: white;
       color: var(--primary-color);
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem;
       border-radius: 4px;
       cursor: pointer;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 400;
+      font-size: 0.75rem;
     }
 
     .language-selector {
@@ -84,6 +85,12 @@ export class NavMenu extends BaseElement {
 
     .language-selector option {
       color: black;
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        font-size: 1.5rem;
+      }
     }
   `;
 

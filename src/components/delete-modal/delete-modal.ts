@@ -66,17 +66,17 @@ export class DeleteModal extends LitElement {
 
   override render() {
     return html`
-      <div class="modal-backdrop" @click=${this.onCancel}>
+      <div class="modal-backdrop" @click=${() => this.onCancel()}>
         <div class="modal" @click=${(e: Event) => e.stopPropagation()}>
           <h2 class="modal-title">${msg("Are you sure?")}</h2>
           <div class="modal-content">
             ${msg("This action cannot be undone.")}
           </div>
           <div class="modal-actions">
-            <button class="cancel-btn" @click=${this.onCancel}>
+            <button class="cancel-btn" @click=${() => this.onCancel()}>
               ${msg("Cancel")}
             </button>
-            <button class="confirm-btn" @click=${this.onConfirm}>
+            <button class="confirm-btn" @click=${() => this.onConfirm()}>
               ${msg("Proceed")}
             </button>
           </div>

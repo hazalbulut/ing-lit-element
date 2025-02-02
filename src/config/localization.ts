@@ -7,5 +7,3 @@ export const { getLocale, setLocale } = configureLocalization({
   targetLocales,
   loadLocale: (locale) => import(`../generated/locales/${locale}.ts`),
 });
-
-console.log("buradayım");
