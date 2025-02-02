@@ -1,4 +1,4 @@
-import { $, $$, expect } from "@wdio/globals";
+import { $, expect } from "@wdio/globals";
 import { EmployeeForm } from "./employee-form";
 import { html, render } from "lit";
 import sinon from "sinon";

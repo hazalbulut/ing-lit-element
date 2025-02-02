@@ -12,7 +12,7 @@ export class NavMenu extends BaseElement {
 
   public unsubscribe?: () => void;
 
-  override connectedCallback() {
+  override async connectedCallback() {
     super.connectedCallback();
 
     this.unsubscribe = store.subscribe(() => {
@@ -23,6 +23,15 @@ export class NavMenu extends BaseElement {
       }
     });
     this.currentLanguage = store.getState().language;
+    await this.setLanguage(this.currentLanguage);
+  }
+
+  private async setLanguage(lang: "en" | "tr") {
+    await setLocale(lang);
+
+    store.dispatch(setLanguage(lang));
+
+    window.dispatchEvent(new CustomEvent("language-changed"));
   }
 
   override disconnectedCallback() {
@@ -34,11 +43,7 @@ export class NavMenu extends BaseElement {
     const select = e.target as HTMLSelectElement;
     const newLang = select.value as "en" | "tr";
 
-    await setLocale(newLang);
-
-    store.dispatch(setLanguage(newLang));
-
-    window.dispatchEvent(new CustomEvent("language-changed"));
+    this.setLanguage(newLang);
   }
 
   static override readonly styles = css`
