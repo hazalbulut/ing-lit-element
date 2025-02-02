@@ -37,7 +37,6 @@ describe("DeleteModal Component", () => {
   it("should render the modal with correct content", async () => {
     const modalTitle = await $("h2.modal-title");
     const modalContent = await $(".modal-content");
-    console.log("modal-title", modalTitle);
     expect(await modalTitle.getText()).toBe("Are you sure?");
     expect(await modalContent.getText()).toBe("This action cannot be undone.");
   });

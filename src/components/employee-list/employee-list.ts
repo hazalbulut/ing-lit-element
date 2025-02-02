@@ -166,8 +166,6 @@ export class EmployeeList extends LitElement {
           ?hidden=${!this.showDeleteModal}
           .onConfirm=${() => this.confirmDelete()}
           .onCancel=${() => {
-            console.log("Cancel edilmek üzere hazırlandı");
-
             this.showDeleteModal = false;
             store.dispatch(setModal(this.showDeleteModal));
             this.requestUpdate();
@@ -176,17 +174,6 @@ export class EmployeeList extends LitElement {
       </div>
     `;
   }
-
-  // private renderDeleteModal() {
-  //   if (!this.showDeleteModal) return null;
-
-  //   return html`
-  //     <delete-modal
-  //       .onConfirm=${() => this.confirmDelete()}
-  //       .onCancel=${() => (this.showDeleteModal = false)}
-  //     ></delete-modal>
-  //   `;
-  // }
 
   private renderPagination() {
     return html`<employee-pagination

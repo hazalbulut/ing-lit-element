@@ -72,11 +72,7 @@ export class EmployeeForm extends BaseElement {
   }
 
   private validateField(field: keyof Employee, value: string) {
-    console.log(field, value);
-
     const validator = new Validator();
-    console.log("field", field);
-
     switch (field) {
       case "email":
         validator.required(value, "email").email(value, "email");
@@ -108,7 +104,6 @@ export class EmployeeForm extends BaseElement {
 
     // Remove old errors for this field
     this.errors = this.errors.filter((error) => error.field !== field);
-    console.log("this.errors", this.errors);
 
     // Add new errors if any
     if (validator.hasErrors()) {
