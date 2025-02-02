@@ -2,12 +2,11 @@ import { Employee } from "../models/employee.model";
 
 export const ADD_EMPLOYEE = "ADD_EMPLOYEE";
 export const UPDATE_EMPLOYEE = "UPDATE_EMPLOYEE";
-export const DELETE_EMPLOYEE = "DELETE_EMPLOYEE";
+export const DELETE_EMPLOYEE = "DELETE_EMPLOYEE" as const;
 export const SET_VIEW_MODE = "SET_VIEW_MODE";
 export const SET_MODAL = "SET_MODAL";
-export const SET_LANGUAGE = "SET_LANGUAGE";
-export const SET_SELECTED_EMPLOYEE = "SET_SELECTED_EMPLOYEE";
-
+export const SET_LANGUAGE = "SET_LANGUAGE" as const;
+export const SET_SELECTED_EMPLOYEE = "SET_SELECTED_EMPLOYEE" as const;
 export const addEmployee = (employee: Omit<Employee, "id">) => ({
   type: ADD_EMPLOYEE as typeof ADD_EMPLOYEE,
   payload: {
