@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="tr" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s97a45f647df53062">
+  <source>Employee Manager</source>
+</trans-unit>
+<trans-unit id="s27b132c4731a29c3">
+  <source>New Employee</source>
+  <target>Yeni Çalışan</target>
+</trans-unit>
+<trans-unit id="s5d929ff1619ac0c9">
+  <source>Search</source>
+</trans-unit>
+<trans-unit id="s337a1e9022a8d19f">
+  <source>Table</source>
+</trans-unit>
+<trans-unit id="s3d249bb480032121">
+  <source>List</source>
+</trans-unit>
+<trans-unit id="s2c57913ffd36d298">
+  <source>First Name</source>
+</trans-unit>
+<trans-unit id="s95a75a2392af5780">
+  <source>Last Name</source>
+</trans-unit>
+<trans-unit id="sd1f44f1a8bc20e67">
+  <source>Email</source>
+</trans-unit>
+<trans-unit id="s1e45a4d7635fbda7">
+  <source>Department</source>
+</trans-unit>
+<trans-unit id="sc1611c0558728a2a">
+  <source>Position</source>
+</trans-unit>
+<trans-unit id="s8af61807443f32a4">
+  <source>Actions</source>
+</trans-unit>
+<trans-unit id="s64ef2a6c2dd1d3d1">
+  <source>Edit</source>
+</trans-unit>
+<trans-unit id="sdc673e73b5c13aea">
+  <source>Delete</source>
+</trans-unit>
+<trans-unit id="s772528836550622c">
+  <source>Date of Employment</source>
+</trans-unit>
+<trans-unit id="s53802e3f37d072a7">
+  <source>Date of Birth</source>
+</trans-unit>
+<trans-unit id="s871b1fe6d1846958">
+  <source>Phone Number</source>
+</trans-unit>
+<trans-unit id="s2ceb11be2290bb1b">
+  <source>Cancel</source>
+</trans-unit>
+<trans-unit id="s33f85f24c0f5f008">
+  <source>Save</source>
+</trans-unit>
+<trans-unit id="s268ecd1cef45a9a8">
+  <source>Are you sure?</source>
+</trans-unit>
+<trans-unit id="s3b3fe4e829af3e8e">
+  <source>This action cannot be undone.</source>
+</trans-unit>
+<trans-unit id="s2714784162ec459d">
+  <source>Proceed</source>
+</trans-unit>
+<trans-unit id="sf8758effabc86aeb">
+  <source>No employees found</source>
+</trans-unit>
+<trans-unit id="s4786054cd6228e02">
+  <source>Enter first name</source>
+</trans-unit>
+</body>
+</file>
+</xliff>

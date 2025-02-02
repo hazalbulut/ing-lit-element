@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "types": ["jest"]
+  },
+  "exclude": [
+    "node_modules",
+    "src/vite-env.d.ts"
+  ]
+} 
