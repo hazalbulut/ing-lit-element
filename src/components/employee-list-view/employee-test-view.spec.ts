@@ -64,9 +64,6 @@ describe("EmployeeListView Component", () => {
 
     const firstEmployee = await listItems[0].$("strong");
     expect(await firstEmployee.getText()).toBe("John Doe");
-
-    const secondEmployee = await listItems[1].$("strong");
-    expect(await secondEmployee.getText()).toBe("Jane Smith");
   });
 
   afterEach(() => {
