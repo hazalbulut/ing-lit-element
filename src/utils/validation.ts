@@ -1,3 +1,5 @@
+import { msg } from "@lit/localize";
+
 export interface ValidationError {
   field: string;
   message: string;
@@ -10,9 +12,13 @@ export class Validator {
     if (!value || value.trim() === "") {
       this.errors.push({
         field,
-        message: `${field} is required`,
+        message: this.mapErrorMessageForRequired(field),
       });
     }
+    if (value && value.trim() !== "") {
+      this.errors = this.errors.filter((error) => error.field !== field);
+    }
+
     return this;
   }
 
@@ -34,7 +40,7 @@ export class Validator {
     if (value && !phoneRegex.test(digitsOnly)) {
       this.errors.push({
         field,
-        message: `Please enter a valid phone number (e.g. +905321234567)`,
+        message: msg(`Please enter a valid phone number (e.g. +905321234567)`),
       });
     }
     return this;
@@ -51,15 +57,25 @@ export class Validator {
     return this;
   }
 
+  mapErrorMessageForRequired(field: string) {
+    const mapped: Record<string, string> = {
+      firstName: msg("First name is required"),
+      lastName: msg("Last name is required"),
+      phoneNumber: msg("Phone number is required"),
+      email: msg("Email is required"),
+      position: msg("Position is required"),
+      department: msg("Department is required"),
+      dateOfEmployment: msg("Date of employment is required"),
+      dateOfBirth: msg("Date of birth is required"),
+    };
+    return mapped[field];
+  }
+
   hasErrors(): boolean {
     return this.errors.length > 0;
   }
 
   getErrors(): ValidationError[] {
     return this.errors;
-  }
-
-  clearErrors() {
-    this.errors = [];
   }
 }
